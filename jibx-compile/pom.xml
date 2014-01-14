@@ -35,7 +35,7 @@
                 <configuration>
                     <schemaBindingDirectory>src/main/resources/bindings</schemaBindingDirectory>
                     <includeSchemaBindings>
-                        <includeSchemaBindings>*-binding.xml</includeSchemaBindings>
+                        <includeSchemaBindings>*.xml</includeSchemaBindings>
                     </includeSchemaBindings>
                     <verbose>true</verbose>
                 </configuration>

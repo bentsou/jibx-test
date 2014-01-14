@@ -1,0 +1,5 @@
+<binding>
+    <mapping name="customer" class="com.bentsou.jibx.test.Order">
+        <value name="order-id" field="id"/>
+    </mapping>
+</binding>

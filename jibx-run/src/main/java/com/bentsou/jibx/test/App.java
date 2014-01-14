@@ -19,7 +19,12 @@ public class App {
         System.out.println("Marshalling");
         StringWriter stringWriter = new StringWriter();
         try {
-            IBindingFactory bindingFactory = BindingDirectory.getFactory(Order.class);
+            IBindingFactory bindingFactory = BindingDirectory.getFactory("order_binding_1_1", Order.class);
+            System.out.println("Binding name: " + bindingFactory.getBindingName());
+            System.out.println("Binding factory version: " + 
+                               bindingFactory.getMajorVersion() + "." +
+                               bindingFactory.getMinorVersion());
+            
             IMarshallingContext context = bindingFactory.createMarshallingContext();
             context.marshalDocument(order, "UTF-8", false, stringWriter);
         } catch (JiBXException ex) {
